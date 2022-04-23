@@ -14,6 +14,7 @@ function App() {
 
       {/* react functional class component */}
       <Toggle title= "Hello React" />
+
     </div>
   );
 }
