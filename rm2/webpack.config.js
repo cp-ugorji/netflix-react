@@ -1,3 +1,8 @@
+//method one
+// module.exports = process.env.NODE_ENV === "development" 
+// ? require("./webpack.config.dev") : require("./webpack.config.prod");
+
+//method two
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
