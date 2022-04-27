@@ -11,7 +11,8 @@
     "build:prod": "cross-env NODE_ENV=production node_modules/.bin/webpack-dev-server -p",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix",
-    "prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
   },
   "author": "",
   "license": "ISC",
