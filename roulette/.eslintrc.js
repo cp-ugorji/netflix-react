@@ -20,6 +20,6 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/prop-types': 'off',
-    indent: 'error'
+    indent: 'off'
   }
 };

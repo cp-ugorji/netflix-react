@@ -1,18 +1,19 @@
 import './Movie.css';
-// import { Menu, MenuButton, MenuList, MenuItem } from '@reach/menu-button';
+import { Menu, MenuButton, MenuList, MenuItem } from '@reach/menu-button';
+import '@reach/menu-button/styles.css';
 import PropTypes from 'prop-types';
 
 const Movie = ({ movie }) => {
   return (
     <div className="item-container">
       <div className="menu-action">
-        {/* <Menu>
+        <Menu>
           <MenuButton>Actions</MenuButton>
           <MenuList>
             <MenuItem>Edit</MenuItem>
             <MenuItem>Delete</MenuItem>
           </MenuList>
-        </Menu> */}
+        </Menu>
       </div>
 
       <div className="movie-container">

@@ -1,4 +1,5 @@
 import './App.css';
+import './buttons.css';
 import MovieList from './components/movieList/MovieList';
 import MovieFilter from './components/movieFilter/MovieFilter';
 import MovieSearch from './components/movieSearch/MovieSearch';
