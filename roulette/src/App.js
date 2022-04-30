@@ -6,6 +6,7 @@ import MovieFilter from './components/movieFilter/MovieFilter';
 import MovieSearch from './components/movieSearch/MovieSearch';
 import movieData from './data/movies';
 import ErrorBoundary from './components/movieError/ErrorBoundary';
+import MovieSort from './components/movieSort/MovieSort';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <div className="movie-main-content">
         <div className="main-content--header">
           <MovieFilter />
+          <MovieSort />
         </div>
         <ErrorBoundary>
           <MovieList movies={movieData} />
