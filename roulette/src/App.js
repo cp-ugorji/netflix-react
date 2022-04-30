@@ -1,7 +1,9 @@
 import './App.css';
 import MovieList from './components/movieList/MovieList';
 import MovieFilter from './components/movieFilter/MovieFilter';
+import MovieSearch from './components/movieSearch/MovieSearch';
 import movieData from './data/movies';
+import ErrorBoundary from './components/movieError/ErrorBoundary';
 
 const App = () => {
   return (
@@ -10,8 +12,11 @@ const App = () => {
         <h1>Netflix</h1>
       </header>
       <div>
+        <MovieSearch />
         <MovieFilter />
-        <MovieList movies={movieData} />
+        <ErrorBoundary>
+          <MovieList movies={movieData} />
+        </ErrorBoundary>
       </div>
     </div>
   );
