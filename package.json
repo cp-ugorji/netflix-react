@@ -24,7 +24,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "lint": "npm run prettier && npm run eslint",
-    "lint:fix": "npm run prettier:fix && npm run eslint:fix"
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +51,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
     "prettier": "^2.6.2"
   }
 }
