@@ -1,18 +1,21 @@
 import './MovieList.css';
 import Movie from '../movieItem/Movie';
 
-const movieContent = (movies) => {
-  if(movies.length){
+const MovieList = ({ movies }) => {
+  const movieContentSize = movies.length;
+  const searchResultStat = movieContentSize > 1 ? `${movieContentSize} movies` : `${movieContentSize} movie`;
+  const mapMovies = movies.map((movie) => (
+    <Movie key={movie.id} movie={movie} />
+  ));
+
+  if(movieContentSize){
     return (
       <>
         <h1>
-          {movies.length}
-          {movies.length > 1 ? ' movies' : ' movie'} found
+          {searchResultStat} found
         </h1>
         <div className="movie-list-content">
-          {movies.map((movie) => (
-            <Movie key={movie.id} movie={movie} />
-          ))}
+          {mapMovies}
         </div>
       </>
     );
@@ -28,9 +31,5 @@ const movieContent = (movies) => {
     )
   }
 }
-
-const MovieList = ({ movies }) => {
-  return movieContent(movies);
-};
 
 export default MovieList;
