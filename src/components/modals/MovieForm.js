@@ -1,4 +1,3 @@
-
 // import { DialogContent, DialogOverlay } from '@reach/dialog';
 // import '@reach/dialog/styles.css';
 // import PropTypes from 'prop-types';

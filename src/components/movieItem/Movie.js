@@ -18,7 +18,7 @@ const Movie = ({ movie }) => {
 
       <div className="movie-container">
         <div>
-          <img src={movie.image_url} height="461" width="337" alt='movie icon' />
+          <img src={movie.image_url} height="461" width="337" alt="movie icon" />
         </div>
 
         <div className="title-content">

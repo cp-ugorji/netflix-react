@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 //react class component
 export default class Counter extends Component {
-
   state = {
     numberCounter: 0
-  }
+  };
 
   increaseCount = () => {
-    this.setState({numberCounter : ++this.state.numberCounter});
+    this.setState({ numberCounter: ++this.state.numberCounter });
   };
 
   decreaseCount = () => {
-    this.setState({numberCounter : --this.state.numberCounter});
+    this.setState({ numberCounter: --this.state.numberCounter });
   };
-    
+
   render() {
     return (
       <div>
@@ -23,6 +22,6 @@ export default class Counter extends Component {
         Counter : {this.state.numberCounter}
         <button onClick={this.increaseCount}>Increase</button>
       </div>
-    )
+    );
   }
 }

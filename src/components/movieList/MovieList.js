@@ -3,24 +3,18 @@ import Movie from '../movieItem/Movie';
 
 const MovieList = ({ movies }) => {
   const movieContentSize = movies.length;
-  const searchResultStat = movieContentSize > 1 ? `${movieContentSize} movies` : `${movieContentSize} movie`;
-  const mapMovies = movies.map((movie) => (
-    <Movie key={movie.id} movie={movie} />
-  ));
+  const searchResultStat =
+    movieContentSize > 1 ? `${movieContentSize} movies` : `${movieContentSize} movie`;
+  const mapMovies = movies.map((movie) => <Movie key={movie.id} movie={movie} />);
 
-  if(movieContentSize){
+  if (movieContentSize) {
     return (
       <>
-        <h1>
-          {searchResultStat} found
-        </h1>
-        <div className="movie-list-content">
-          {mapMovies}
-        </div>
+        <h1>{searchResultStat} found</h1>
+        <div className="movie-list-content">{mapMovies}</div>
       </>
     );
-  }
-  else{
+  } else {
     return (
       <div className="movies-not-found">
         <h1>No movie found</h1>
@@ -28,8 +22,8 @@ const MovieList = ({ movies }) => {
           GO BACK TO SEARCH
         </button>
       </div>
-    )
+    );
   }
-}
+};
 
 export default MovieList;
