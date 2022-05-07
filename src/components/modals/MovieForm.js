@@ -1,7 +1,7 @@
-
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import '@reach/dialog/styles.css';
 import PropTypes from 'prop-types';
+import './MovieForm.css'
 
 const MovieForm = ({ showModal, setShowModal, editMovie = {}, refreshMoviesAdd, refreshMoviesUpdate }) => {
   const movieObj = {
@@ -13,19 +13,16 @@ const MovieForm = ({ showModal, setShowModal, editMovie = {}, refreshMoviesAdd, 
     runtime:      editMovie?.runtime      || '',
   }
 
+  console.log(movieObj);
+
   if (editMovie.id) {
     movieObj.id = editMovie.id;
   }
 
   const close = () => setShowModal(false);
 
-  const switchModalTitle = () => {
-    return editMovie.id ? 'EDIT ' : 'ADD ';
-  };
-
-  const switchSubmit = () => {
-    return editMovie.id ? 'SAVE' : 'SUBMIT';
-  };
+  const switchModalTitle = editMovie.id ? 'EDIT ' : 'ADD ';
+  const switchSubmit = editMovie.id ? 'SAVE' : 'SUBMIT';
 
   return (
     <div className="modal-container">
@@ -82,7 +79,7 @@ const MovieForm = ({ showModal, setShowModal, editMovie = {}, refreshMoviesAdd, 
             <div className="row-container">
               <label>
                   <p className="input-label">GENRES*</p>
-                  <input
+                  <select
                     className="input-form-movie"
                     name="genres"
                     type="text"
