@@ -1,0 +1,10 @@
+.movie-list-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movies-not-found {
+  margin: 10% 0;
+  text-align: center;
+}
