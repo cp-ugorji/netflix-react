@@ -8,7 +8,7 @@ const MovieDelete = ({ showModal, setShowModal, movieId, refreshMovies }) => {
     const close = () => setShowModal(false);
 
     async function deleteMovieAction() {
-        console.log('deleted');
+        console.log(`deleted ${movieId}`);
         close();
     }
 

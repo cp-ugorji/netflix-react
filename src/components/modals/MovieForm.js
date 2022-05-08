@@ -20,8 +20,6 @@ const MovieForm = ({
         runtime: editMovie?.runtime || ''
     };
 
-    console.log(movieObj);
-
     if (editMovie.id) {
         movieObj.id = editMovie.id;
     }
