@@ -11,7 +11,7 @@ const Add = () => {
       <button type="button" className="btn-add" onClick={open}>
         + ADD MOVIE
       </button>
-      <MovieForm showModal={show} setShowModal={setShow}/>
+      <MovieForm showModal={show} setShowModal={setShow} />
     </div>
   );
 };
