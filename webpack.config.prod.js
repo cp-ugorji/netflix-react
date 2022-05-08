@@ -21,7 +21,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          // "style-loader",
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
@@ -39,6 +38,9 @@ module.exports = {
         exclude: /\.module\.css$/,
       },
     ]
+  },
+  resolve: {
+    extensions: [".js", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({
