@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Add from './components/addMovie/Add';
 import MovieList from './components/movieList/MovieList';
 import MovieFilter from './components/movieFilter/MovieFilter';
@@ -12,22 +11,22 @@ import './buttons.css';
 import './App.css';
 
 function App() {
-  return (
-    <div className="netflix-roulette-content">
-      <Add />
-      <MovieSearch />
+    return (
+        <div className="netflix-roulette-content">
+            <Add />
+            <MovieSearch />
 
-      <div className="movie-main-content">
-        <div className="main-content--header">
-          <MovieFilter />
-          <MovieSort />
+            <div className="movie-main-content">
+                <div className="main-content--header">
+                    <MovieFilter />
+                    <MovieSort />
+                </div>
+                <ErrorBoundary>
+                    <MovieList movies={movieData} />
+                </ErrorBoundary>
+            </div>
         </div>
-        <ErrorBoundary>
-          <MovieList movies={movieData} />
-        </ErrorBoundary>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default App;
