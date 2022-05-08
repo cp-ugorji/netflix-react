@@ -14,7 +14,7 @@ const MovieForm = ({
   const movieObj = {
     title: editMovie?.title || '',
     release_date: editMovie?.release_date || '',
-    poster_path: editMovie?.poster_path || '',
+    poster_path: editMovie?.image_url || '',
     genres: editMovie?.genres || [],
     overview: editMovie?.overview || '',
     runtime: editMovie?.runtime || ''
@@ -86,25 +86,17 @@ const MovieForm = ({
               <label>
                 <p className="input-label">GENRES*</p>
                 <select
-                  className="input-form-movie"
+                  className="input-form-select"
                   name="genres"
-                  type="text"
                   placeholder="Select Genre"
                   value={movieObj.genres}
-                />
-              </label>
-            </div>
-
-            <div className="row-container">
-              <label>
-                <p className="input-label">OVERVIEW*</p>
-                <input
-                  className="input-form-movie"
-                  name="overview"
-                  type="text"
-                  placeholder="Overview here"
-                  value={movieObj.overview}
-                />
+                >
+                  <option value="">Select Genre</option>
+                  <option value="Crime">Crime</option>
+                  <option value="Documentary">Documentary</option>
+                  <option value="Horror">Horror</option>
+                  <option value="Comedy">Comedy</option>
+                </select>
               </label>
             </div>
 
@@ -118,6 +110,20 @@ const MovieForm = ({
                   placeholder="Runtime here"
                   value={movieObj.runtime}
                 />
+              </label>
+            </div>
+
+            <div className="row-container">
+              <label>
+                <p className="input-label">OVERVIEW*</p>
+                <textarea
+                  className="input-form-textarea"
+                  name="overview"
+                  placeholder="Overview here"
+                  rows="20"
+                >
+                  {movieObj.overview}
+                </textarea>
               </label>
             </div>
 

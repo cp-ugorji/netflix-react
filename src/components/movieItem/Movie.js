@@ -3,16 +3,33 @@ import './Movie.css';
 import { Menu, MenuButton, MenuList, MenuItem } from '@reach/menu-button';
 import '@reach/menu-button/styles.css';
 import PropTypes from 'prop-types';
+import MovieForm from '../modals/MovieForm';
+import MovieDelete from '../modals/MovieDelete';
 
 const Movie = ({ movie }) => {
+  const [showFormModal, setShowFormModal] = React.useState(false);
+  const [showDeleteModal, setShowDeleteModal] = React.useState(false);
+
   return (
     <div className="item-container">
       <div className="menu-action">
         <Menu>
           <MenuButton>Actions</MenuButton>
           <MenuList>
-            <MenuItem>Edit</MenuItem>
-            <MenuItem>Delete</MenuItem>
+            <MenuItem
+              onSelect={() => {
+                setShowFormModal(true);
+              }}
+            >
+              Edit
+            </MenuItem>
+            <MenuItem
+              onSelect={() => {
+                setShowDeleteModal(true);
+              }}
+            >
+              Delete
+            </MenuItem>
           </MenuList>
         </Menu>
       </div>
@@ -29,6 +46,13 @@ const Movie = ({ movie }) => {
 
         <p className="movie-genres">{movie.genres.join(', ')}</p>
       </div>
+
+      <MovieForm showModal={showFormModal} setShowModal={setShowFormModal} editMovie={movie} />
+      <MovieDelete
+        showModal={showDeleteModal}
+        setShowModal={setShowDeleteModal}
+        movieId={movie.id}
+      />
     </div>
   );
 };
