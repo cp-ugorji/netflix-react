@@ -1,6 +1,8 @@
+import React from 'react';
+
 import './MovieFilter.css';
 
-const MovieFilter = () => {
+function MovieFilter() {
   return (
     <div className="filter-container">
       <span>ALL</span>
@@ -10,6 +12,6 @@ const MovieFilter = () => {
       <span>CRIME</span>
     </div>
   );
-};
+}
 
 export default MovieFilter;

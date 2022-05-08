@@ -1,8 +1,10 @@
-import './MovieSort.css';
+import React from 'react';
 import { Listbox, ListboxOption } from '@reach/listbox';
 import '@reach/listbox/styles.css';
 
-const MovieSort = ({ sortMovies }) => {
+import './MovieSort.css';
+
+function MovieSort({ sortMovies }) {
   return (
     <div className="sort-content">
       <span>SORT BY</span>
@@ -14,6 +16,6 @@ const MovieSort = ({ sortMovies }) => {
       </Listbox>
     </div>
   );
-};
+}
 
 export default MovieSort;

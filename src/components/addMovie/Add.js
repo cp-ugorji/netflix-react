@@ -1,5 +1,8 @@
+import React from 'react';
+
 import './Add.css';
-const Add = () => {
+
+function Add() {
   return (
     <div className="new-movie-container">
       <button type="button" className="btn-add">
@@ -7,6 +10,6 @@ const Add = () => {
       </button>
     </div>
   );
-};
+}
 
 export default Add;
