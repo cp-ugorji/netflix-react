@@ -1,21 +1,21 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true
-  },
-  extends: ['plugin:react/recommended', 'eslint:recommended', 'prettier'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
+    env: {
+        browser: true,
+        es2021: true,
+        node: true
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module'
-  },
-  plugins: ['react'],
-  rules: {
-    indent: 'error',
-    'react/prop-types': 'off',
-    'react/jsx-filename-extension': [0]
-  }
+    extends: ['plugin:react/recommended', 'eslint:recommended', 'prettier'],
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module'
+    },
+    plugins: ['react'],
+    rules: {
+        indent: 'error',
+        'react/prop-types': 'off',
+        'react/jsx-filename-extension': [0]
+    }
 };

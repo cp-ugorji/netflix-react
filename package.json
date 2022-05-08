@@ -16,7 +16,7 @@
     "build:dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --watch",
     "build:prod": "cross-env NODE_ENV=production node_modules/.bin/webpack-dev-server -p",
     "eslint": "eslint .",
-    "eslint:fix": "eslint --fix",
+    "eslint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "lint": "npm run eslint && npm run prettier",
