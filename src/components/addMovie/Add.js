@@ -1,6 +1,6 @@
+import React from 'react';
 import './Add.css';
 import MovieForm from '../modals/MovieForm';
-import React from 'react';
 
 const Add = () => {
   const [show, setShow] = React.useState(false);

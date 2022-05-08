@@ -1,3 +1,4 @@
+import React from 'react';
 import './MovieSort.css';
 import { Listbox, ListboxOption } from '@reach/listbox';
 import '@reach/listbox/styles.css';
