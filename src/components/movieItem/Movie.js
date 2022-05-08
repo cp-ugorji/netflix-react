@@ -1,10 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 import './Movie.css';
+=======
+
+>>>>>>> 34d90a41f8e08aedd5b9a558b7c89c6c0e4288f5
 import { Menu, MenuButton, MenuList, MenuItem } from '@reach/menu-button';
 import '@reach/menu-button/styles.css';
 import PropTypes from 'prop-types';
 
-const Movie = ({ movie }) => {
+import './Movie.css';
+
+function Movie({ movie }) {
   return (
     <div className="item-container">
       <div className="menu-action">
@@ -31,7 +37,7 @@ const Movie = ({ movie }) => {
       </div>
     </div>
   );
-};
+}
 
 Movie.propTypes = {
   movie: PropTypes.shape({

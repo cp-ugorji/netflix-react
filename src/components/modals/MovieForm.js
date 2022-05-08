@@ -1,7 +1,7 @@
 import React from 'react';
 
-const MovieForm = () => {
+function MovieForm() {
   return <div>movieForm</div>;
-};
+}
 
 export default MovieForm;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieSearch.css';
 
-const MovieSearch = () => {
+function MovieSearch() {
   return (
     <div className="search-main-container">
       <div className="find-movie-container">
@@ -21,6 +21,6 @@ const MovieSearch = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MovieSearch;
