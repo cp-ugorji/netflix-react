@@ -3,17 +3,17 @@ import './Add.css';
 import MovieForm from '../modals/MovieForm';
 
 const Add = () => {
-  const [show, setShow] = React.useState(false);
-  const open = () => setShow(true);
+    const [show, setShow] = React.useState(false);
+    const open = () => setShow(true);
 
-  return (
-    <div className="new-movie-container">
-      <button type="button" className="btn-add" onClick={open}>
+    return (
+        <div className="new-movie-container">
+            <button type="button" className="btn-add" onClick={open}>
         + ADD MOVIE
-      </button>
-      <MovieForm showModal={show} setShowModal={setShow} />
-    </div>
-  );
+            </button>
+            <MovieForm showModal={show} setShowModal={setShow} />
+        </div>
+    );
 };
 
 export default Add;

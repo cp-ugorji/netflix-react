@@ -10,24 +10,24 @@ import ErrorBoundary from './components/movieError/ErrorBoundary';
 import MovieSort from './components/movieSort/MovieSort';
 
 const App = () => {
-  return (
-    <div className="netflix-roulette-content">
-      <>
-        <Add />
-        <MovieSearch />
-      </>
+    return (
+        <div className="netflix-roulette-content">
+            <>
+                <Add />
+                <MovieSearch />
+            </>
 
-      <div className="movie-main-content">
-        <div className="main-content--header">
-          <MovieFilter />
-          <MovieSort />
+            <div className="movie-main-content">
+                <div className="main-content--header">
+                    <MovieFilter />
+                    <MovieSort />
+                </div>
+                <ErrorBoundary>
+                    <MovieList movies={movieData} />
+                </ErrorBoundary>
+            </div>
         </div>
-        <ErrorBoundary>
-          <MovieList movies={movieData} />
-        </ErrorBoundary>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default App;
