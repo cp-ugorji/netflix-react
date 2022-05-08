@@ -1,14 +1,10 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'eslint:recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['plugin:react/recommended', 'eslint:recommended', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -19,6 +15,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     indent: 'error',
+    'react/prop-types': 'off',
     'react/jsx-filename-extension': [0]
   }
 };
