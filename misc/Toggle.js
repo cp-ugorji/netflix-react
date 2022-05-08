@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Toggle({ title }) {
+const Toggle = ({ title }) => {
     const [showTitle, setShowTitle] = useState(true);
     console.log(title);
     return (
@@ -10,6 +10,6 @@ function Toggle({ title }) {
             <button onClick={() => setShowTitle(!showTitle)}>Toggle Title</button>
         </div>
     );
-}
+};
 
 export default Toggle;

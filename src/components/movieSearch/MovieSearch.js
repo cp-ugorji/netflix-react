@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieSearch.css';
 
-function MovieSearch() {
+const MovieSearch = () => {
     return (
         <div className="search-main-container">
             <div className="find-movie-container">

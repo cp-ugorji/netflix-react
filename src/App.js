@@ -7,14 +7,13 @@ import movieData from './data/movies';
 import ErrorBoundary from './components/movieError/ErrorBoundary';
 import MovieSort from './components/movieSort/MovieSort';
 
-import './buttons.css';
-import './App.css';
-
-function App() {
+const App = () => {
     return (
         <div className="netflix-roulette-content">
-            <Add />
-            <MovieSearch />
+            <>
+                <Add />
+                <MovieSearch />
+            </>
 
             <div className="movie-main-content">
                 <div className="main-content--header">
@@ -27,6 +26,6 @@ function App() {
             </div>
         </div>
     );
-}
+};
 
 export default App;
