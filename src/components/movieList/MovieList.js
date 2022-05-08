@@ -1,3 +1,4 @@
+import React from 'react';
 import './MovieList.css';
 import Movie from '../movieItem/Movie';
 

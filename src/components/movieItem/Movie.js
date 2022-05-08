@@ -1,3 +1,4 @@
+import React from 'react';
 import './Movie.css';
 import { Menu, MenuButton, MenuList, MenuItem } from '@reach/menu-button';
 import '@reach/menu-button/styles.css';

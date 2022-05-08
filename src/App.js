@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import './buttons.css';
 import Add from './components/addMovie/Add';
