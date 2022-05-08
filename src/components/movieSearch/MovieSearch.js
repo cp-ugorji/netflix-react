@@ -21,6 +21,6 @@ const MovieSearch = () => {
             </div>
         </div>
     );
-};
+}
 
 export default MovieSearch;

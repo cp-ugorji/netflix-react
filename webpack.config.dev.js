@@ -15,9 +15,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                use: 'babel-loader'
             },
             {
                 test: /\.css$/,
@@ -45,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'src', 'index.html'),
+            template: './src/index.html',
             title: 'Development'
         }),
         new CleanWebpackPlugin(),

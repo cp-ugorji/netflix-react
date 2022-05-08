@@ -15,6 +15,7 @@ module.exports = {
     plugins: ['react'],
     rules: {
         indent: 'error',
-        "react/prop-types": 'off'
+        'react/prop-types': 'off',
+        'react/jsx-filename-extension': [0]
     }
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './Add.css';
 import MovieForm from '../modals/MovieForm';
 

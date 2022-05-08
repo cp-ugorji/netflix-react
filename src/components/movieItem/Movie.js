@@ -1,10 +1,10 @@
 import React from 'react';
-import './Movie.css';
 import { Menu, MenuButton, MenuList, MenuItem } from '@reach/menu-button';
 import '@reach/menu-button/styles.css';
 import PropTypes from 'prop-types';
 import MovieForm from '../modals/MovieForm';
 import MovieDelete from '../modals/MovieDelete';
+import './Movie.css'
 
 const Movie = ({ movie }) => {
     const [showFormModal, setShowFormModal] = React.useState(false);

@@ -1,6 +1,6 @@
 import React from 'react';
-import './MovieList.css';
 import Movie from '../movieItem/Movie';
+import './MovieList.css';
 
 const MovieList = ({ movies }) => {
     const movieContentSize = movies.length;
