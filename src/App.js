@@ -1,32 +1,43 @@
 import React from 'react';
-import Add from './components/addMovie/Add';
-import MovieList from './components/movieList/MovieList';
-import MovieFilter from './components/movieFilter/MovieFilter';
-import MovieSearch from './components/movieSearch/MovieSearch';
-import movieData from './data/movies';
-import ErrorBoundary from './components/movieError/ErrorBoundary';
-import MovieSort from './components/movieSort/MovieSort';
-
-import './buttons.css';
 import './App.css';
+import Home from './components/Home/Home';
+import SortBy from './components/SortBy/SortBy';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import NoMatch from './components/NoMatch/Nomatch';
+import MovieDetail from './components/MovieDetail/MovieDetail';
+import FooterContainer from './containers/FooterContainer/FooterContainer';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import ErrorBoundary from './components/ErrorBoudary/ErrorBoudary';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
-function App() {
-    return (
-        <div className="netflix-roulette-content">
-            <Add />
-            <MovieSearch />
-
-            <div className="movie-main-content">
-                <div className="main-content--header">
-                    <MovieFilter />
-                    <MovieSort />
-                </div>
-                <ErrorBoundary>
-                    <MovieList movies={movieData} />
-                </ErrorBoundary>
-            </div>
+export default function App(){
+  return(
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Header/>
+          <ErrorBoundary>
+            <Switch>
+              <Route exact path="/movies" component={Home}></Route>
+              <Route exact path="/movies/:movieId" component={MovieDetail}></Route>          
+              <Route exact path="/" component={Home}></Route>
+              <Route path="*" component={NoMatch}></Route>          
+            </Switch>
+          </ErrorBoundary>        
+          <FooterContainer>
+            <Footer/>
+          </FooterContainer>
         </div>
-    );
+      </Router>
+    </Provider>
+  );
 }
 
-export default App;
+
+ 
