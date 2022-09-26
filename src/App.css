@@ -1,24 +1,67 @@
-body {
-  background-color: #232323;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+.App {
+  background-color: #424242
 }
-
-.netflix-roulette-content {
-  align-items: center;
+h2{
+  display: inline;
+}
+h1,h2,h3,p,span{
+  color: #ffffff;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float:right;
+}
+.margin-5{
+  margin: 5px;
+}
+.margin-10{
+  margin: 10px;
+}
+.margin-15{
+  margin: 15px;
+}
+.margin-20{
+  margin: 20px;
+}
+.flex-container{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  margin-top: 2%;
-  max-width: 1073px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.movie-main-content {
-  margin-top: 20px;
+button{
+  background-color: #424242; /* Green */
+  border: none;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
-.main-content--header {
-  display: flex;
-  margin: 10px 0 25px 0;
+button:hover{
+  background-color: #f65261;
 }
+.button-active{
+  background-color: #f65261;
+}
+input[type=text]{  
+  padding: 10px 20px;  
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+} 
+
+
+
+
+
